@@ -7,7 +7,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ## Features
 
--[x] NeoVide
+- [x] NeoVide
 
 ## Neovim Plugin List
 
