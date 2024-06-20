@@ -202,43 +202,43 @@ return {
       })
     end,
   },
-  {
-    "jay-babu/mason-null-ls.nvim",
-    commit = "e270134d83ba59425edc53356c6fd337b61bb8dd",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-      "williamboman/mason.nvim",
-      {
-        "nvimtools/none-ls.nvim",
-      },
-    },
-    config = function()
-      local null_ls = require("null-ls")
-      null_ls.setup({
-        debug = false,
-        sources = {
-          null_ls.builtins.diagnostics.cpplint.with({
-            -- override args completely to make sure ordering is correct
-            args = {
-              "--filter=-legal/copyright,-build/include_subdir,-whitespace/line_length,-readability/casting",
-              "$FILENAME",
-            },
-          }, null_ls.builtins.code_actions.cpplint),
-        },
-        temp_dir = '/tmp',
-      })
-      require("mason-null-ls").setup({
-        automatic_setup = true,
-        ensure_installed = {
-          "isort@5.11.5",
-          "cpplint",
-          "shfmt",
-          "markdown_oxide"
-        },
-        handlers = {},
-      })
-    end,
-  },
+  -- {
+  --   "jay-babu/mason-null-ls.nvim",
+  --   commit = "e270134d83ba59425edc53356c6fd337b61bb8dd",
+  --   event = { "BufReadPre", "BufNewFile" },
+  --   dependencies = {
+  --     "williamboman/mason.nvim",
+  --     {
+  --       "nvimtools/none-ls.nvim",
+  --     },
+  --   },
+  --   config = function()
+  --     local null_ls = require("null-ls")
+  --     null_ls.setup({
+  --       debug = false,
+  --       sources = {
+  --         null_ls.builtins.diagnostics.cpplint.with({
+  --           -- override args completely to make sure ordering is correct
+  --           args = {
+  --             "--filter=-legal/copyright,-build/include_subdir,-whitespace/line_length,-readability/casting",
+  --             "$FILENAME",
+  --           },
+  --         }, null_ls.builtins.code_actions.cpplint),
+  --       },
+  --       temp_dir = '/tmp',
+  --     })
+  --     require("mason-null-ls").setup({
+  --       automatic_setup = true,
+  --       ensure_installed = {
+  --         "isort@5.11.5",
+  --         "cpplint",
+  --         "shfmt",
+  --         "markdown_oxide"
+  --       },
+  --       handlers = {},
+  --     })
+  --   end,
+  -- },
   {
     'Wansmer/symbol-usage.nvim',
     event = 'LspAttach', -- need run before LspAttach if you use nvim 0.9. On 0.10 use 'LspAttach'

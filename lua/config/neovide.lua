@@ -2,7 +2,7 @@
 -- Neovide配置
 if vim.g.neovide then
   -- 设置字体
-  vim.o.guifont = "JetBrainsMono Nerd Font:h15:w1"  -- 你可以根据需要更改字体名称和大小
+  vim.o.guifont = "JetBrainsMono Nerd Font:h15:b"  -- 你可以根据需要更改字体名称和大小
   vim.opt.linespace = 0 -- Line spacing
   vim.g.neovide_scale_factor = 1.0 -- Scale
  
