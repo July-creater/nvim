@@ -1,4 +1,6 @@
-vim.g.mapleader = " "
+-- 主键和两次rr键重启Neovim
+vim.api.nvim_set_keymap('n', '<leader>rr', ':source $MYVIMRC<CR>:PackerSync<CR>', { noremap = true, silent = true })
+
 
 local keymap = vim.keymap
 
@@ -21,7 +23,3 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- 切换buffer
 keymap.set("n", "<S-L>", ":bnext<CR>")
 keymap.set("n", "<S-H>", ":bprevious<CR>")
-
--- ---------- 插件 ---------- ---
--- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
