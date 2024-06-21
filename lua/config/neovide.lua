@@ -21,8 +21,8 @@ if vim.g.neovide then
   end
   -- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
   -- 设置透明背景
-  vim.g.neovide_transparency = 0.8  -- 透明度，0到1之间
-  vim.g.transparency = 0.8
+  vim.g.neovide_transparency = 1.0  -- 透明度，0到1之间
+  vim.g.transparency = 1.0
   vim.g.neovide_background_color = "#0f1117" .. alpha()
 
   -- Window Blur (Currently macOS only)
