@@ -11,7 +11,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ## Neovim Plugin List
 
-Below is the list of plugins used in my Neovim configuration:
+我已经安装的插件如下：
 
 - **dressing.nvim** - Improved UI for input and select
 - **leap.nvim** - Motion plugin for Neovim
@@ -38,7 +38,7 @@ Below is the list of plugins used in my Neovim configuration:
 - **nvim-treesitter-textobjects** - Syntax-aware text objects
 - **nvim-surround** - Surround text objects
 
-## Use
+## Usage
 
 ``` bash
 # required
@@ -54,5 +54,25 @@ git clone https://github.com/wq-july/nvim ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 
 nvim
+
+```
+
+## Font
+
+我使用的字体
+
+```
+
+sudo apt-get update
+sudo apt-get install fontconfig unzip -y
+
+cd fonts
+unzip JetBrainsMono.zip -d JetBrainsMono
+unzip KaiTi.zip
+sudo cp -r JetBrainsMono /usr/share/fonts/
+sudo cp -r KaiTi /usr/share/fonts/
+
+fc-cache -fv
+fc-list
 
 ```
