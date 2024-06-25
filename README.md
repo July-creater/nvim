@@ -59,19 +59,15 @@ nvim
 
 ## Font
 
-我使用的字体
+JetBrainsMono Nerd Font 字体安装
 
 ```
+# 等宽字体网站：https://www.nerdfonts.com/font-downloads
 
 sudo apt-get update
 sudo apt-get install fontconfig unzip -y
 
-cd fonts
-unzip JetBrainsMono.zip -d JetBrainsMono
-unzip KaiTi.zip
 sudo cp -r JetBrainsMono /usr/share/fonts/
-sudo cp -r Hack /usr/share/fonts/
-sudo cp -r Chinese /usr/share/fonts/
 
 fc-cache -fv
 fc-list
