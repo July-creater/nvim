@@ -70,7 +70,8 @@ cd fonts
 unzip JetBrainsMono.zip -d JetBrainsMono
 unzip KaiTi.zip
 sudo cp -r JetBrainsMono /usr/share/fonts/
-sudo cp -r KaiTi /usr/share/fonts/
+sudo cp -r Hack /usr/share/fonts/
+sudo cp -r Chinese /usr/share/fonts/
 
 fc-cache -fv
 fc-list
